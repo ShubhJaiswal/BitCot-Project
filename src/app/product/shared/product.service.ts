@@ -11,11 +11,12 @@ export class ProductService {
   showCartItems : boolean = false ;
   localProject = [];
   existing;
-  _url = 'https://jsonplaceholder.typicode.com/photos';
+  _url = 'https://jsonplaceholder.typicode.com/photos?_limit=8';
+  //https://jsonplaceholder.typicode.com/photos?_limit=4;
   constructor(private http: HttpClient, private router: Router) { }
 
   public getProducts() : Observable<Product[]>    { 
-     return this.http.get<Product[]>('https://jsonplaceholder.typicode.com/photos?_limit=4');
+     return this.http.get<Product[]>(this._url);
   }
 
   addProductToCart(prodcuts: any) {

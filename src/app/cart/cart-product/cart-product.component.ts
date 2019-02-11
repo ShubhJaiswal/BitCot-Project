@@ -43,7 +43,7 @@ export class CartProductComponent implements OnInit {
 
   }
   buyProduct() {
-    alert('This functionlity is not done');
+    alert('This functionlity is not implemented');
   }
 
 

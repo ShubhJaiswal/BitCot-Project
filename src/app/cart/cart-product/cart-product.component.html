@@ -6,26 +6,28 @@
   <p><strong>  Currently, there is no item in your cart! </strong></p>
 </div>
 <div *ngIf="productAddedTocart.length > 1">
-  <table>
+  <table border="1">
     <thead>
       <tr>
         <th> Product ID</th> <br><br>
         <th> Product Album ID</th><br> <br>
-        <th> Product Url</th><br> <br>
-        <th> Product Thumbnail Url</th> <br><br>
+        <th> Product Image</th><br> <br>
+        <th> Product Prise</th> <br><br>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let products of productAddedTocart">
         <td>{{products.id}}</td> <br><br>
         <td>{{products.albumId}}</td> <br><br>
-        <td>{{products.url }} <br></td> <br><br>
-        <td>{{products.thumbnailUrl}}</td> <br><br>
+        <td><img src={{products.thumbnailUrl}} /></td><br><br>
+        <td> <img src={{products.thumbnailUrl}}  /> </td> 
 
       </tr>
     </tbody>
   </table>
 
-  <button mat-raised-button (click)="buyProduct()"> Buy Now </button>
+  
+  <button mat-raised-button (click)="buyProduct()"> CONTINUE SHOPPING </button>
+  <button mat-raised-button (click)="buyProduct()"> PLACE ORDER </button>
 
 </div>

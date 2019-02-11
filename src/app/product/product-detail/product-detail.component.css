@@ -1,0 +1,17 @@
+.md-button.md-cornered {
+    border-radius: 0;
+}
+
+.mat-button, .mat-raised-button {
+    background-color:red;
+     color: beige; 
+     float: right;
+     margin-left: 10px;
+     margin : 10px;
+} 
+
+#closebtn{
+    background-color:orange;
+     color: beige; 
+    float: right;
+}

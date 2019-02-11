@@ -1,0 +1,12 @@
+.md-button.md-cornered {
+    border-radius: 0;
+}
+
+.mat-button, .mat-raised-button {
+    
+    background-color:orangered;
+     color: beige; 
+     margin-right:16px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+} 

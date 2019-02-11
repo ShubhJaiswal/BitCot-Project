@@ -4,4 +4,14 @@
 
 .mat-button, .mat-raised-button{
     background-color:red;
+     color: beige; 
 } 
+
+
+
+
+        .card-title{
+            font-size: 19px;
+            margin: 3px 0;
+            
+        }      
