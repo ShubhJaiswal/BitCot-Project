@@ -9,50 +9,42 @@ import { ProductService } from '../../product/shared/product.service';
 })
 export class CartProductComponent implements OnInit {
 
-  constructor(private route : ActivatedRoute, private productService : ProductService) { }
+  constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
-  product: any = []; 
-  
-  productAddedTocart:any[];
+  product: any = [];
+
+  productAddedTocart: any[];
 
 
-  ngOnInit() { 
+  ngOnInit() {
 
     this.product = this.route.params["value"];
 
-    this.productAddedTocart=this.productService.getProductFromCart();
-              if(this.productAddedTocart==null)
-              {
-                this.productAddedTocart=[];
-                this.productAddedTocart.push(this.product);
-                this.productService.addProductToCart(this.productAddedTocart);
-              
-              }
-              else
-              {
-                let tempProduct=this.productAddedTocart.find( 
-                  p => 
-              {
-                return  p.id == this.product.id} );
+    this.productAddedTocart = this.productService.getProductFromCart();
+    if (this.productAddedTocart == null) {
+      this.productAddedTocart = [];
+      this.productAddedTocart.push(this.product);
+      this.productService.addProductToCart(this.productAddedTocart);
 
-              
+    }
+    else {
+      let tempProduct = this.productAddedTocart.find(
+        p => {
+          return p.id == this.product.id
+        });
+      if (tempProduct == undefined) {
+        this.productAddedTocart.push(this.product);
+        this.productService.addProductToCart(this.productAddedTocart);
+      }
 
-                 if(tempProduct == undefined)
-                 {
-                  
-                  this.productAddedTocart.push(this.product);
-                  this.productService.addProductToCart(this.productAddedTocart);
-            
-                }
-              
-              }
+    }
 
 
 
   }
-  buyProduct(){
+  buyProduct() {
     alert('This functionlity is not done');
   }
-  
+
 
 }

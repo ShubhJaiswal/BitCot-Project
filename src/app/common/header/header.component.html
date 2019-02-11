@@ -16,7 +16,10 @@
             </ng-container>
             <li *ngIf="auth.isAuthenticated()" class="nav-item">
                     <a class="nav-link" >{{auth.getUsername()}}</a>
-                </li>
+            </li>
+            <li *ngIf="auth.isAuthenticated()" class="nav-item">
+                <a class="nav-link" (click)="myCart()">My Cart</a>
+            </li>
             <li *ngIf="auth.isAuthenticated()" class="nav-item">
                 <a class="nav-link" (click)="logout()">Logout</a>
             </li>
