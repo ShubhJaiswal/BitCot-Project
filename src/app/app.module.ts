@@ -21,6 +21,7 @@ const routes : Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
+   // CartProductComponent
     
   ],
   imports: [
@@ -31,7 +32,7 @@ const routes : Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     AuthModule,
-    CommonModule,
+    CommonModule
     
   ],
   providers: [AuthGuard],

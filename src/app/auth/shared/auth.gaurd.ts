@@ -9,14 +9,14 @@ export class AuthGuard implements CanActivate {
     private url: string;
     constructor(private auth: AuthService, private router: Router) { }
 
-    private handleAuthState(): boolean {
+    private handleAuthState(): boolean { debugger
         if(this.isLoginOrRegister()){
             this.router.navigate(['/cart'])
             return false;
         }
         return true;
     }   
-    private handleNotAuthState(): boolean  {
+    private handleNotAuthState(): boolean  { debugger
         if(this.isLoginOrRegister()){
             return true;
         }

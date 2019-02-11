@@ -1,30 +1,18 @@
-<h2 mat-dialog-title>This is a Dialog title</h2>
+<h2 mat-dialog-title> Product Detail </h2>
+<button class="mat-raised-button" (click)="close()">Close</button>
+<table>
+  <tr>
+    <th>Album ID</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Image</th>
+  </tr>
+  <tr *ngFor="let Product of ProductDetail">
+    <td>{{Product.albumId}}</td>
+    <td>{{Product.id}}</td>
+    <td>{{Product.title}}</td>
+    <td><img src={{Product.thumbnailUrl}} /></td>
+    <button class="mat-raised-button" (click)="cartProduct(Product)">Add to cart</button>
 
-
-<p>
-  product-detail works!
-</p>
-<h1>
-    Product Detail 
-  </h1>
-  <table>
-    <tr>
-      <th>Album ID</th>
-      <th>Id</th>
-      <th>Title</th>
-      <th>Image</th>
-    </tr>
-    <tr *ngFor="let Product of ProductDetail">
-      <td>{{Product.albumId}}</td>
-      <td>{{Product.id}}</td>
-      <td>{{Product.title}}</td>
-      <td><img src={{Product.thumbnailUrl}} /></td>
-      <button class="mat-raised-button" (click)="cartProduct(Product)">Add to cart</button>
-      
-    </tr>
-  </table>
-|
-    <button class="mat-raised-button"  (click)="close()">Close</button>
-    <button class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</button>
-  
-  
+  </tr>
+</table>

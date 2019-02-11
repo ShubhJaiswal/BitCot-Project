@@ -11,6 +11,7 @@ import { CartProductComponent } from '../../cart/cart-product/cart-product.compo
 export class ProductListItemComponent implements OnInit {
 
   @Input() products : any;
+  
   constructor(private prodSer: ProductService,public dialog : MatDialog) { }
   
   openDialog(product) {

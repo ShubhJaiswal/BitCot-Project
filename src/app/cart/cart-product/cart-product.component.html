@@ -1,8 +1,24 @@
-<p>
-  cart-product works!
-</p>
-<p>{{product.id}}</p>
-<p>{{product.albumId}}</p>
-<p>{{product.url}}</p>
-<p>{{product.thumbnailUrl}}</p>
+<h1>
+  Product Cart
+ </h1>
+<table>
+  <thead>
+    <tr>
+      <th> Product ID</th> <br><br>
+      <th> Product Album ID</th><br> <br>
+      <th> Product Url</th><br> <br>
+      <th> Product Thumbnail Url</th> <br><br>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let products of productAddedTocart"> 
+      <td>{{products.id}}</td> <br><br>
+      <td>{{products.albumId}}</td> <br><br>
+      <td>{{products.url   }}  <br></td> <br><br>
+      <td>{{products.thumbnailUrl}}</td> <br><br> 
+      
+    </tr>
+  </tbody>
+</table> 
 
+<button mat-raised-button (click)="buyProduct()"> Buy Now </button>

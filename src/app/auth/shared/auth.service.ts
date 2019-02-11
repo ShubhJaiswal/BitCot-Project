@@ -50,6 +50,7 @@ export class AuthService {
 
         localStorage.removeItem('AngApp_Auth');
         localStorage.removeItem('AngApp_meta');
+        localStorage.removeItem('product');
 
         this.decodedToken = new DecodecToken();        
     }

@@ -7,7 +7,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatButtonModule} from '@angula
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-
+  
   ProductDetail = [];
   constructor(private prodSer : ProductService, public dialogRef: MatDialogRef<ProductDetailComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any ) { }
@@ -16,12 +16,12 @@ export class ProductDetailComponent implements OnInit {
     this.ProductDetail.push(this.data.productInfo);
   }
 
-  cartProduct(product){ debugger
+  cartProduct(product){ 
     
     console.log(product);
     this.prodSer.cartProduct(product);
     this.dialogRef.close();
-   // close();
+   
   }
   close() {
     this.dialogRef.close();

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../shared/auth.service'
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 import { ProductService } from '../../product/shared/product.service';
 @Component({
   selector: 'app-login',
@@ -12,7 +12,8 @@ export class LoginComponent implements OnInit {
 
  loginForm : FormGroup;
  errors : any[] = [];
-  constructor(private fb: FormBuilder, private auth: AuthService, private router:Router, private prdService : ProductService) { }
+  constructor(private fb: FormBuilder, private auth: AuthService, private router:Router, private prdService : ProductService
+                ) { }
 
   ngOnInit() {
     this.initForm();
@@ -37,11 +38,12 @@ export class LoginComponent implements OnInit {
     return this.loginForm.controls[fieldName].errors.required;
   }
 
-  login(){
+  login(){ debugger
     this.auth.login(this.loginForm.value).subscribe ( token => {
       // if(this.prdService.showCartItems){
       //   this.router.navigate(['/cart'])  
       // }else{
+        
          this.router.navigate(['/'])
       //}
       

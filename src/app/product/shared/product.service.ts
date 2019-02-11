@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class ProductService {
 
   showCartItems : boolean = false ;
+  localProject = [];
+  existing;
   _url = 'https://jsonplaceholder.typicode.com/photos';
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -16,9 +18,16 @@ export class ProductService {
      return this.http.get<Product[]>('https://jsonplaceholder.typicode.com/photos?_limit=4');
   }
 
-  public cartProduct(product : any):any{ debugger
-    //this.showCartItems = true;
-    this.router.navigate(['/cart',product])
-    //alert('Item added to cart');
+  addProductToCart(prodcuts: any) {
+    localStorage.setItem("product", JSON.stringify(prodcuts));
+  }
+  
+  getProductFromCart() {
+    return JSON.parse(localStorage.getItem('product'));
+  }
+  
+  public cartProduct(product : any):any{ 
+    
+    this.router.navigate(['/cart',product]);   
   }
 }

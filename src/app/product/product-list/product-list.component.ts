@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
       this.prodSer.getProducts().subscribe(
-      (data) => {
+      (data) => { 
           this.products = data;
       });
   }
