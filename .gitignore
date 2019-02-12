@@ -44,7 +44,6 @@ testem.log
 Thumbs.db
 
 
-/server/config/dev.js
 
 .DS_STORE
 
@@ -66,7 +65,6 @@ modules/.settings
 modules/.vscode
 
 # Don't check in secret files
-*secret.js
 
 # Ignore npm/yarn debug log
 npm-debug.log

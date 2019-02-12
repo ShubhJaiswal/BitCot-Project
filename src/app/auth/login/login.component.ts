@@ -41,15 +41,8 @@ export class LoginComponent implements OnInit {
   login() {
     
     this.auth.login(this.loginForm.value).subscribe(token => {
-      // if(this.prdService.showCartItems){
-      //   this.router.navigate(['/cart'])  
-      // }else{
-
       this.router.navigate(['/'])
-      //}
-
-
-    },
+     },
       (errorResponse) => {
         this.errors = errorResponse.error.errors;
       })
